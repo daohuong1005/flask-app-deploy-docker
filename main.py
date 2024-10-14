@@ -10,7 +10,10 @@ import jwt
 
 # pylint: disable=import-error
 from flask import Flask, jsonify, request, abort
+from dotenv import load_dotenv
 
+# Load environment variables from .env_file
+load_dotenv('.env_file')  # Ensure this file exists in your project directory
 
 JWT_SECRET = os.environ.get('JWT_SECRET', 'myjwtsecret')
 LOG_LEVEL = os.environ.get('LOG_LEVEL', 'INFO')
