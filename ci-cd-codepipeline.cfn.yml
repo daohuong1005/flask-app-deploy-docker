@@ -305,14 +305,7 @@ Resources:
                   - ecr:InitiateLayerUpload
                   - ecr:UploadLayerPart
                   - ecr:CompleteLayerUpload
-              - Resource: arn:aws:ssm:us-east-1:015601052302:parameter/*
-                Effect: Allow
-                Action:
-                  - ssm:GetParameters
-                  - ssm:GetParameter
-                  - ssm:GetParameterHistory
-
-
+                  
   CodeBuildProject:
     Type: AWS::CodeBuild::Project
     Properties:
